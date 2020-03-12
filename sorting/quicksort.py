@@ -2,15 +2,15 @@ class QuickSort:
 
     def __init__(self, arr):
         self.array = arr
-    
+
     def swap(self, a, b):
         temp = self.array[a]
         self.array[a] = self.array[b]
         self.array[b] = temp
-    
+
     def myprint(self):
         for item in self.array:
-            print('{}'.format(item), end=" ")
+            print('{}'.format(item, end=" "))
         print("\n")
 
     def partition(self, left, right):
@@ -27,3 +27,4 @@ class QuickSort:
         center = self.partition(left, right)
         self.sort(left, center-1);
         self.sort(center+1, right)
+
