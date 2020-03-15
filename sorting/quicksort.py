@@ -28,3 +28,14 @@ class QuickSort:
         self.sort(left, center-1);
         self.sort(center+1, right)
 
+    def myprint_first(self, num):
+        for item in self.array[0 : num]:
+            print(item, end=' ')
+        print("\n")
+
+
+    def myprint_last(self, num):
+        for item in self.array[ len(self.array) - num  : len(self.array) - 1]:
+            print(item, end=' ')
+        print("\n")
+

@@ -6,8 +6,11 @@ class RadixSort(Sort):
     def __init__(self, arr):
         self.array = arr
 
-    def sort(self, num):
+    def sort(self):  # num
         #R = [0 for item in range(0, len(self.array))]
+
+        num = len(str(max(self.array)))
+
         for cycle in range(0, num):
             R = [0 for item in range(0, len(self.array))]
             N = [0 for item in range(0, 10)]
@@ -18,6 +21,11 @@ class RadixSort(Sort):
                 calc = self.find_tens
             elif cycle == 2:
                 calc = self.find_hunds
+            elif cycle == 3:
+                calc = self.find_thsnds
+            elif cycle == 4:
+                calc = self.find_tens_of_thsnds
+
             for item in self.array:
                 N[calc(item)] += 1
 
@@ -31,12 +39,13 @@ class RadixSort(Sort):
 
             self.array = R
 
-    def find_hunds(self, num):
-        return num // 100
+    def find_hunds(self, num): return num % 10000 % 1000 // 100
 
-    def find_tens(self, num):
-        return num % 100 // 10
+    def find_tens(self, num): return num % 100 // 10
 
-    def find_eigens(self, num):
-        return num % 100 % 10
+    def find_eigens(self, num): return num % 100 % 10
+
+    def find_thsnds(self, num): return num % 10000 // 1000
+
+    def find_tens_of_thsnds(self, num): return num // 10000
 

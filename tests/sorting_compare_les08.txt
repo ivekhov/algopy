@@ -1,0 +1,13 @@
+nums: 0 -- 65535
+
+size: 1_000_000
+RadixSort: 2.69 sec
+CountingSort: 0.13 sec
+BucketSort: 0.33 sec on 1_000 buckets
+QuickSort: 7.4 sec
+Mergesort: 7.46 sec
+ShellSort:
+HeapSort: 
+
+
+
