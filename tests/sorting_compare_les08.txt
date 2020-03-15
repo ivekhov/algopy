@@ -6,8 +6,8 @@ CountingSort: 0.13 sec
 BucketSort: 0.33 sec on 1_000 buckets
 QuickSort: 7.4 sec
 Mergesort: 7.46 sec
-ShellSort:
-HeapSort: 
+ShellSort: too long unknown
+HeapSort:  12.6 sec
 
 
 

@@ -36,6 +36,7 @@ def main():
     #test_sort.sort() #1000 for Bucket
     # test_sort.sort(0, 1000000) #1000000 for Quick
     test_sort.sort(2) #2 for Shell
+    # test_sort.sort(len(arr)) # for Heap
 
     duration = time.perf_counter() - start_time
     print(duration)
